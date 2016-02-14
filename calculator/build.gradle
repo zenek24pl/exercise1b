@@ -1,0 +1,14 @@
+apply plugin: 'application'
+
+mainClassName = "wdsr.exercise1.Main"
+
+run {
+	if (System.getProperty("exec.args") != null) {
+    	args System.getProperty("exec.args").split()
+    }
+}
+
+dependencies {
+    compile project(':conversions')
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+}
